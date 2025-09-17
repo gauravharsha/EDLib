@@ -61,6 +61,7 @@ add_subdirectory(include/ext)
 include(GNUInstallDirs)
 
 add_library(${PROJECT_NAME} INTERFACE)
+add_library(EDLib::EDLib ALIAS ${PROJECT_NAME})  # Define namespaced alias target
 add_library(common-lib lib/dummy.f90)
 target_include_directories(
   ${PROJECT_NAME}
